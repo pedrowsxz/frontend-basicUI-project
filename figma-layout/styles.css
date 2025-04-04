@@ -1,0 +1,226 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Barra de Promoção */
+.promo-bar {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+  
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+/* Barra de Navegação */
+.nav-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+  
+/* Busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.search-container input {
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+.search-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.search-container button img {
+    width: 20px;
+    height: 20px;
+}
+.user-actions a {
+    margin-left: 15px;
+}
+.user-actions img {
+    width: 20px;
+    height: 20px;
+}
+  
+/* Seção Hero */
+.hero {
+    position: relative;
+    background: url('supersale.png') no-repeat center center / cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero-text {
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 8px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+  
+/* Conteúdo Principal */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+  
+/* Resultados de Busca */
+.search-result {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+/* Seção de lançamentos */
+.lancamentos {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+}
+
+.section-header a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Carrossel */
+.swiper-container {
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.product-card {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.product-card p {
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Navegação do carrossel */
+.swiper-button-next, 
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next::after, 
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .product-card {
+        margin: 0 10px;
+    }
+}

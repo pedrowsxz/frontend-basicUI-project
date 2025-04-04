@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avanti - Mega Promoção</title>
+
+  <!-- CSS do Carrossel Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Barra de Promoção -->
+  <div class="promo-bar">
+    Ganhe R$20,00 de desconto na sua primeira compra! Use o cupom: <strong>DESCONTO20</strong>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="header-content">
+      <div class="logo">AVANTI</div>
+
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="O que você procura?" />
+        <button id="search-button">
+          <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" alt="Ícone de Busca" />
+        </button>
+      </div>
+
+      <div class="user-actions">
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Minha Conta" />
+        </a>
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/126/126083.png" alt="Carrinho de Compras" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Menu de Navegação -->
+    <nav class="nav-links">
+      <a href="#">Todos os Produtos</a>
+      <a href="#">Categorias</a>
+      <a href="#">Departamentos</a>
+      <a href="#">Departamentos</a>
+      <a href="#">Departamentos</a>
+      <a href="#">Departamentos</a>
+      <a href="#">Departamentos</a>
+      <a href="#">Departamentos</a>
+      <a href="#">Departamentos</a>
+    </nav>
+  </header>
+  
+  <!-- Banner Principal -->
+  <section class="hero"></section>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Resultados da Busca -->
+    <div class="search-result" id="search-result"></div>
+
+    <!-- Seção de Lançamentos -->
+    <section class="lancamentos">
+      <div class="section-header">
+        <h2>Lançamentos</h2>
+        <a href="#">Ver mais</a>
+      </div>
+
+      <!-- Carrossel de Produtos -->
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Produto 1 -->
+          <div class="swiper-slide product-card">
+            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 1" />
+            <h3>Camiseta Básica 1</h3>
+            <p>R$ 49,90</p>
+          </div>
+          
+          <!-- Produto 2 -->
+          <div class="swiper-slide product-card">
+            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 2" />
+            <h3>Camiseta Básica 2</h3>
+            <p>R$ 49,90</p>
+          </div>
+          
+          <!-- Produto 3 -->
+          <div class="swiper-slide product-card">
+            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 3" />
+            <h3>Camiseta Básica 3</h3>
+            <p>R$ 49,90</p>
+          </div>
+          
+          <!-- Produto 4 -->
+          <div class="swiper-slide product-card">
+            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 4" />
+            <h3>Camiseta Básica 4</h3>
+            <p>R$ 49,90</p>
+          </div>
+          
+          <!-- Produto 5 -->
+          <div class="swiper-slide product-card">
+            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 5" />
+            <h3>Camiseta Básica 5</h3>
+            <p>R$ 49,90</p>
+          </div>
+          
+          <!-- Produto 6 -->
+          <div class="swiper-slide product-card">
+            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 6" />
+            <h3>Camiseta Básica 6</h3>
+            <p>R$ 49,90</p>
+          </div>
+        </div>
+        
+        <!-- Controles do Carrossel -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Avanti - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JavaScript do Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript Personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
