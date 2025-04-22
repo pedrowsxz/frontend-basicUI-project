@@ -7,126 +7,576 @@
 
   <!-- CSS do Carrossel Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- CSS Personalizado -->
+  <!-- Css dos ícones das redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Css -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Barra de Promoção -->
   <div class="promo-bar">
-    Ganhe R$20,00 de desconto na sua primeira compra! Use o cupom: <strong>DESCONTO20</strong>
+    Ganhe <span>R$10,00</span> de desconto no seu primeiro pedido. Use o cupom <strong class="light-text">DESCONTO10</strong>
   </div>
 
   <!-- Cabeçalho -->
   <header>
     <div class="header-content">
-      <div class="logo">AVANTI</div>
+      <div class="logo"><img src="./images/avanti-logo.png"></div>
 
       <div class="search-container">
-        <input type="text" id="search-input" placeholder="O que você procura?" />
+        <input type="text" id="search-input" placeholder="Digite aqui o que você procura" />
         <button id="search-button">
-          <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" alt="Ícone de Busca" />
+          <i class="fas fa-search"></i>
         </button>
       </div>
 
       <div class="user-actions">
-        <a href="#">
-          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Minha Conta" />
-        </a>
-        <a href="#">
+        <div class="user-account-wrapper">
+          <a href="#" class="user-account">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Minha Conta" />
+            <span class="user-greeting">Olá,<br>Nome cliente!</span>
+          </a>
+        </div>
+        <a href="#" class="cart-icon">
           <img src="https://cdn-icons-png.flaticon.com/512/126/126083.png" alt="Carrinho de Compras" />
         </a>
       </div>
     </div>
 
     <!-- Menu de Navegação -->
-    <nav class="nav-links">
-      <a href="#">Todos os Produtos</a>
-      <a href="#">Categorias</a>
-      <a href="#">Departamentos</a>
-      <a href="#">Departamentos</a>
-      <a href="#">Departamentos</a>
-      <a href="#">Departamentos</a>
-      <a href="#">Departamentos</a>
-      <a href="#">Departamentos</a>
-      <a href="#">Departamentos</a>
+    <nav class="nav-bar">
+      <nav class="nav-links">
+          <div class="menu-trigger" >
+            <span class="hamburger">&#9776;</span>
+            <span href="#">Todas as Categorias</span>
+          </div>
+          <div class="mega-menu">
+            <div class="menu-columns">
+              <div class="column">
+                <h4>Departamento</h4>
+                <ul>
+                  <li>Departamento</li>
+                  <li>Departamento</li>
+                  <li>Departamento</li>
+                  <li>Departamento</li>
+                  <li>Departamento</li>
+                  <li>Departamento</li>
+                  <li>Departamento</li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Categoria</h4>
+                <ul>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Categoria</h4>
+                <ul>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Categoria</h4>
+                <ul>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                  <li>Categoria</li>
+                </ul>
+              </div>
+              <div class="column">
+                <div class="promo-banner">
+                  <img src="./images/image3.png" alt="Promoção" />
+                  <div class="promo-text">
+                    <p>Confira os<br>Produtos<br><strong>Que acabaram<br>De chegar</strong></p>
+                    <button>VER TODOS</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+      </nav>
+        
+      
+
     </nav>
   </header>
   
   <!-- Banner Principal -->
-  <section class="hero"></section>
+  <section class="hero">
+  </section>
 
   <!-- Conteúdo Principal -->
   <main>
     <!-- Resultados da Busca -->
     <div class="search-result" id="search-result"></div>
 
-    <!-- Seção de Lançamentos -->
-    <section class="lancamentos">
-      <div class="section-header">
-        <h2>Lançamentos</h2>
-        <a href="#">Ver mais</a>
-      </div>
+    <!-- Container que 'wrapa' as seções que se repetem e limita seu width -->
+    <div class="container-limitador">
+      <!-- Seção de Lançamentos -->
+      <section class="lancamentos">
+        <div class="section-header">
+          <h3>Lançamentos</h2>
+          <a href="#">Ver mais</a>
+        </div>
 
-      <!-- Carrossel de Produtos -->
-      <div class="swiper-container mySwiper">
-        <div class="swiper-wrapper">
-          <!-- Produto 1 -->
-          <div class="swiper-slide product-card">
-            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 1" />
-            <h3>Camiseta Básica 1</h3>
-            <p>R$ 49,90</p>
+        <!-- Carrossel de Produtos -->
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">            
+            <!-- Produto 1 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>            
+
+            <!-- Produto 2 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 3 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 4 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 5 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 6 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
           </div>
           
-          <!-- Produto 2 -->
-          <div class="swiper-slide product-card">
-            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 2" />
-            <h3>Camiseta Básica 2</h3>
-            <p>R$ 49,90</p>
+          <!-- Controles do Carrossel -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Seção info -->
+      <section id="info-section" class="info-section">
+        <div class="info-container">
+          <div class="info-image">
+            <img src="./images/imagem2.png" alt="Descriptive Alt Text" />
           </div>
-          
-          <!-- Produto 3 -->
-          <div class="swiper-slide product-card">
-            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 3" />
-            <h3>Camiseta Básica 3</h3>
-            <p>R$ 49,90</p>
-          </div>
-          
-          <!-- Produto 4 -->
-          <div class="swiper-slide product-card">
-            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 4" />
-            <h3>Camiseta Básica 4</h3>
-            <p>R$ 49,90</p>
-          </div>
-          
-          <!-- Produto 5 -->
-          <div class="swiper-slide product-card">
-            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 5" />
-            <h3>Camiseta Básica 5</h3>
-            <p>R$ 49,90</p>
-          </div>
-          
-          <!-- Produto 6 -->
-          <div class="swiper-slide product-card">
-            <img src="https://placehold.co/800@2x.png" alt="Camiseta Básica 6" />
-            <h3>Camiseta Básica 6</h3>
-            <p>R$ 49,90</p>
+          <div class="info-text">
+            <h2>LOREM IPSUM</h2>
+            <p>
+              Duis consectetur metus nec lacus auctor dignissim.
+              Mauris vitae finibus dui. Mauris laoreet lacus ut
+              eleifend viverra. Cras efficitur volutpat dui, in lobortis
+              metus lacinia sit amet. Sed lacinia pharetra magna, vel
+              pulvinar ligula hendrerit a. Maecenas fringilla porttitor
+              tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce
+              sagittis elit a libero commodo egestas efficitur id
+              augue.
+            </p>
+            <p>
+              Duis consectetur metus nec lacus auctor dignissim.
+              Mauris vitae finibus dui. Mauris laoreet lacus ut
+              eleifend viverra. Cras efficitur volutpat dui, in lobortis
+              metus lacinia sit amet. Sed lacinia pharetra magna, vel
+              pulvinar ligula hendrerit a. Maecenas fringilla porttitor
+              tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce
+              sagittis elit a libero commodo egestas efficitur id
+              augue.
+            </p>
           </div>
         </div>
-        
-        <!-- Controles do Carrossel -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+      </section>
+    </div>
+    
+    <!-- Seção info meio -->
+    <section id="info-section-middle" class="info-section-middle">
+      <div class="info-content">
+        <div class="info-left">
+          <h2>LOREM IPSUM</h2>
+          <div class="info-block">
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p>
+              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+          <div class="info-block">
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p>
+              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+          <div class="info-block">
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p>
+              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </div>
+        </div>
+        <div class="info-right">
+          <img src="./images/image3.png" alt="Product image" />
+        </div>
       </div>
     </section>
+
+    <!-- Container que 'wrapa' as seções que se repetem e limita seu width -->
+    <div class="container-limitador">
+      <!-- Seção info -->
+      <section id="info-section" class="info-section">
+        <div class="info-container">
+          <div class="info-image">
+            <img src="./images/imagem2.png" alt="Descriptive Alt Text" />
+          </div>
+          <div class="info-text">
+            <h2>Lorem Ipsum</h2>
+            <p>
+              Duis consectetur metus nec lacus auctor dignissim.
+              Mauris vitae finibus dui. Mauris laoreet lacus ut
+              eleifend viverra. Cras efficitur volutpat dui, in lobortis
+              metus lacinia sit amet. Sed lacinia pharetra magna, vel
+              pulvinar ligula hendrerit a. Maecenas fringilla porttitor
+              tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce
+              sagittis elit a libero commodo egestas efficitur id
+              augue.
+            </p>
+            <p>
+              Duis consectetur metus nec lacus auctor dignissim.
+              Mauris vitae finibus dui. Mauris laoreet lacus ut
+              eleifend viverra. Cras efficitur volutpat dui, in lobortis
+              metus lacinia sit amet. Sed lacinia pharetra magna, vel
+              pulvinar ligula hendrerit a. Maecenas fringilla porttitor
+              tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce
+              sagittis elit a libero commodo egestas efficitur id
+              augue.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Seção de Lançamentos -->
+      <section class="lancamentos">
+        <div class="section-header">
+          <h3>Lançamentos</h2>
+          <a href="#">Ver mais</a>
+        </div>
+  
+        <!-- Carrossel de Produtos -->
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Produto 1 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>            
+
+            <!-- Produto 2 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 3 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 4 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 5 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+            
+            <!-- Produto 6 -->
+            <div class="swiper-slide product-card">
+              <div class="label-novo">NOVO</div>
+              <img src="https://placehold.co/800@2x.png" alt="Camiseta Branca"/>
+            
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+            
+              <div class="price-section">
+                <span class="old-price">R$ 100,00</span>
+                <span class="discount-tag">10% OFF</span>
+              </div>
+            
+              <div class="current-price">R$79,90</div>
+              <div class="installments">Ou em até <strong>10x de R$ 7,90</strong></div>
+            
+              <button>Comprar</button>
+            </div>  
+          </div>
+          
+          <!-- Controles do Carrossel -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Avanti - Todos os direitos reservados.</p>
-  </footer>
+<!-- Banner Inferior -->
+ <div class="banner-inferior">
+ </div>
+
+<!-- Newsletter -->
+ <div class="container-limitador">
+  <section class="newsletter">
+    <h3>Cadastre-se na nossa <a href="#">newsletter</a></h3>
+    <form class="newsletter-form">
+      <input type="text" placeholder="Digite seu nome" />
+      <input type="email" placeholder="Digite seu e-mail" />
+      <label>
+        <input type="checkbox" />
+        Estou de acordo com a <a href="#">Política de Privacidade</a>
+      </label>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </section>
+ </div>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="./images/avanti-logo2.png">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-columns">
+      <div> 
+        <h4>Institucional</h4>
+        <h5>Sobre Nós</h5>
+        <h5>Nossas Lojas</h5>
+        <h5>Privacidade e Segurança</h5>
+        <h5>Termos e Condições</h5>
+      </div>
+      <div>
+        <h4>Central de ajuda</h4>
+        <h5>Fale Conosco</h5>
+        <h5>Frete e Entrega</h5>
+        <h5>Trocas e Devoluções</h5>
+        <h5>Formas de Pagamento</h5>
+        <h5>FAQ</h5>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <h5><strong>Telefone:</strong> (00) 1234-5678</h5>
+        <h5><strong>E-mail:</strong> exemplo@exemplo.com.br</h5>
+        <h5><strong>Horário de atendimento:</strong><br />
+          Segunda a Sábado: 07h00 às 23h00<br />
+          Domingos e Feriados: 07h00 às 21h00
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ícones de pagamento -->
+  <div class="payment-icons">
+    <img src="./images/icones-pagamento.png">
+  </div>
+
+  <!-- Seção footer inferior -->
+  <div class="footer-bottom">
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+      tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+      facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+    </p>
+    <div class="logos">
+      <img src="./images/logos.png">
+    </div>
+  </div>
+</footer>
 
   <!-- JavaScript do Swiper -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
